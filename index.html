@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表达验证及提交</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <form onSubmit="return submitForm();" id="myForm" name="myForm">
+        <div>
+            <label for="title">输入框</label>
+            <input type="text" id="title" placeholder="请输入标题">
+        </div>
+        <div>
+            <label for="pwd">密码框</label>
+            <input id="pwd" type="password" placeholder="请输入密码" required>
+            <span id="valid">
+
+            </span>
+        </div>
+        <div>
+            <label for="select">选择框</label>
+            <select name="area" id="select">
+                <option value="gz" selected>广州</option>
+                <option value="bj">北京</option>
+            </select>
+        </div>
+        <div>
+            <label>复选框</label>
+            <input type="checkbox" name="cbox">写作
+            <input type="checkbox" name="cbox" checked>阅读
+            <input type="checkbox" name="cbox" checked>发呆
+
+        </div>
+        <div>
+            <label for="onOff">开       &nbsp;&nbsp;关 </label>
+            <input type="checkbox" id="toggle" class="offscreen" /> <label for="toggle" class="switch">on off</label>
+
+        </div>
+        <div>
+            <label for="sex">单选框</label>
+            <input type="radio" name="sex" value="male">男
+
+            <input type="radio" name="sex" value="female" checked>女
+        </div>
+        <div class="texarea">
+            <label for="texarea">文本框</label>&nbsp;
+ 
+            <textarea name="texarea" rows="10" cols="30" id="texarea" placeholder="请输入内容"></textarea>
+        </div>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="submit" type="submit" value="立即提交">
+
+        <button onclick="reset()">
+            重置
+        </button>
+    </form>
+    <script src="js/form.js"></script>
+</body></html>
